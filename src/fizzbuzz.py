@@ -1,8 +1,7 @@
 import sys
-from typing import NoReturn
 
 
-def parse_cli(argv: list[str]) -> range | NoReturn:
+def parse_cli(argv: list[str]) -> range:
     try:
         start, stop = int(argv[1]), int(argv[2])
     except IndexError:
