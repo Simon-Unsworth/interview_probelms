@@ -1,7 +1,8 @@
 import sys
+from typing import Never
 
 
-def parse_cli(argv: list[str]) -> range:
+def parse_cli(argv: list[str]) -> range | Never:
     try:
         start, stop = int(argv[1]), int(argv[2])
     except IndexError:
