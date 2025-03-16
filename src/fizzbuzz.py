@@ -1,5 +1,4 @@
 import sys
-from typing import Iterable, Iterator
 
 
 def parse_cli(argv: list[str]) -> range:
