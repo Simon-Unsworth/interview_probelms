@@ -15,16 +15,15 @@ def parse_cli(argv: list[str]) -> range:
     return range(start, stop + step, step)
 
 
-def fizzbuzz(numbers: Iterable[int]) -> Iterator[str]:
-    for number in numbers:
-        fizz = "fizz" if number % 3 == 0 else ""
-        buzz = "buzz" if number % 5 == 0 else ""
-        yield f"{fizz}{buzz}" or f"{number}"
+def fizzbuzz(number: int) -> str:
+    fizz = "fizz" if number % 3 == 0 else ""
+    buzz = "buzz" if number % 5 == 0 else ""
+    return f"{fizz}{buzz}" or f"{number}"
 
 
 def main(argv: list[str]) -> None:
     numbers = parse_cli(argv)
-    results = fizzbuzz(numbers)
+    results = map(fizzbuzz, numbers)
     print(*results)
 
 
