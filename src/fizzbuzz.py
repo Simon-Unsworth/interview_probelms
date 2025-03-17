@@ -17,7 +17,7 @@ def parse_cli(argv: list[str]) -> range:
 def fizzbuzz(number: int) -> str:
     fizz = "fizz" if number % 3 == 0 else ""
     buzz = "buzz" if number % 5 == 0 else ""
-    return f"{fizz}{buzz}" or f"{number}"
+    return f"{fizz+buzz or number}"
 
 
 def main(argv: list[str]) -> None:
